@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./assets/css/checkout.css" />
+    <title>Checkout</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <form action="">
+                <h1> Détails livraison</h1>
+                <div class="name">
+                    <div>
+                        <label for="f-name">First name</label>
+                        <input type="text" name="f-name" value="Aurélie">
+                    </div>
+                    <div>
+                        <label for="l-name">Last name</label>
+                        <input type="text" name="l-name" value="Lessage">
+                    </div>
+                </div>
+                <div class="street">
+                    <label for="street">Street</label>
+                    <input type="text" name="street" value="3 rue des pins">
+                </div>
+                <div class="address-info">
+                    <div>
+                        <label for="country">Country</label>
+                        <input type="text" name="country" value="France">
+                    </div>
+                    <div>
+                        <label for="city">City</label>
+                        <input type="text" name="city" value="Paris">
+                    </div>
+                    <div>
+                        <label for="zip">Zip Code</label>
+                        <input type="text" name="zip" value="75019">
+                    </div>
+                </div>
+                <h1>Information Paiement</h1>
+                <div class="cc-num">
+                    <label for="card-num">numero de carte</label>
+                    <input type="text" name="card-num">
+                </div>
+                <div class="cc-info">
+                    <div>
+                        <label for="expire">Exp</label>
+                        <input type="text" name="expire">
+                    </div>
+                    <div>
+                        <label for="security">CCV</label>
+                        <input type="text" name="security">
+                    </div>
+                </div>
+                <div class="bout">
+                    <button type="submit" id='validation' onclick="alert('Merci de votre confiance, vous allez recevoir un email de confirmation');">Commander</button>
+                    <button type="button" id='back_btn' onclick="window.location.href='./basket.html'">Back</button>
+                </div>
+                <img src=" ./assets/img/checkout/logo_cb.jpg" alt="cb" width="100" height="23" background-position="left" class="visa">
+            </form>
+        </div>
+    </div>
+</Body>
+
+</html>

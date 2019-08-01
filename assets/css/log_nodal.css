@@ -1,0 +1,292 @@
+/************************************************************
+* PRINCIPE :
+* 2 : shapes (login, newuser, forgot.. sont affiché ou caché)
+* 1 : shape (forme du nodal)
+* 0 : bg-dark (l'arrière plan en overlay)
+**************************************************************/
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+
+/******************************
+******  BACKGROUND NODAL  *****
+*******************************/
+
+.bg-dark {
+    display: block;
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 100%;
+    height: 2000px;
+    z-index: -1;
+    background-color: rgba(127, 127, 127, 0.75);
+}
+
+
+/*******************************
+********** NODAL GENERAL  ******
+********************************/
+
+#nodal-login {
+    position: fixed;
+    display: none;
+    width: 100%;
+    top: -500px;
+    z-index: 90;
+    opacity: 0;
+}
+
+.shape-container {
+    width: 400px;
+    min-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nodal-login .logo {
+    display: flex;
+    height: 75px;
+    background-color: #1b1f51;
+    border-radius: 10px 10px 0 0;
+}
+
+#nodal-login .logo img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*******************************
+*****  LOGIN NODAL SHAPE  ******
+********************************/
+
+
+/* BG-SHAPE */
+
+#nodal-login .shape {
+    margin-top: 100px;
+    height: 380px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.959);
+}
+
+
+/* LOGIN-SHAPE */
+
+#nodal-login-shape {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -290px;
+    width: 80%;
+    height: 270px;
+}
+
+
+/* FORGET-SHAPE */
+
+#nodal-forget-shape {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -290px;
+    width: 80%;
+    height: 270px;
+}
+
+#nodal-forget-shape p {
+    position: relative;
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+
+#nodal-forget-shape .field {
+    position: relative;
+    margin-top: 45px;
+}
+
+#nodal-forget-shape .button-aera {
+    position: relative;
+    margin-top: 40px;
+}
+
+
+/* NEW-USER-SHAPE */
+
+#nodal-newUser-shape {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -300px;
+    height: 300px;
+    width: 95%;
+}
+
+
+/* NEW-USER-SHAPE-FORMULAIRE */
+
+.nodal-login-form {
+    display: flex;
+    flex-flow: column;
+}
+
+.nodal-newUser-form {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    height: 400x;
+}
+
+.nodal-newUser-form>.col {
+    width: 33%;
+    justify-content: center;
+}
+
+
+/**************************
+********  BUTTONS  ********
+***************************/
+
+
+/* BUTTON GROUP CONTAINER(SUBMIT AND NEWUSER) */
+
+.button-aera {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+
+/* VALIDATE BUTTON */
+
+button[id*='validation'] {
+    display: block;
+    background-color: #FFC800;
+    border: 2px solid #FFC800;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+button[id*='validation']:hover {
+    border: 2px solid white;
+    background-color: rgb(71, 199, 75);
+    cursor: pointer;
+    font-weight: bold
+}
+
+
+/* BACK BUTTON */
+
+#back-btn-forget,
+#back-btn-login,
+#back-btn-newUser {
+    background-color: #5d5d5d;
+    border: 2px solid #5d5d5d;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#back-btn-forget:hover,
+#back-btn-login:hover,
+#back-btn-newUser:hover {
+    background-color: #adacac;
+    border: 2px solid white;
+    cursor: pointer;
+    font-weight: bold
+}
+
+
+/* NEW USER BUTTON */
+
+#newUser_btn {
+    background-color: #1b1f51;
+    border: 2px solid #1b1f51;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#newUser_btn:hover {
+    background-color: rgb(40, 46, 117);
+    border: 2px solid white;
+    cursor: pointer;
+    font-weight: bold
+}
+
+
+/*************************
+*******   INPUT     ******
+**************************/
+
+
+/* FIELD (CONTAINER INPUT) */
+
+.field {
+    width: 100%;
+    margin: 8px 0 0 0;
+}
+
+.require {
+    color: #ce2b02;
+    ;
+    font-size: 0.8em;
+    opacity: 0;
+}
+
+.require.invalid {
+    opacity: 1;
+}
+
+#foret-password {
+    margin: 5px 0;
+    text-align: left;
+}
+
+#foret-password:hover {
+    color: #FFC800;
+}
+
+
+/*  INPUT */
+
+#nodal-login input {
+    height: 30px;
+    width: 90%;
+    border: 1px solid #777777;
+    margin: 5px 0;
+    font-size: 1em;
+    padding-left: 8px;
+}
+
+#nodal-login input:hover {
+    border: 1px solid #FFC800;
+}
+
+#nodal-login input[type="checkbox"] {
+    width: 1em;
+}
+
+#nodal-login input.invalid {
+    border: 1px solid #ce2b02;
+}

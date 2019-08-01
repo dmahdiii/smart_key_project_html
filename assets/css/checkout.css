@@ -1,0 +1,252 @@
+/*******************************
+*********** GENERAL ************
+********************************/
+
+@font-face {
+    font-family: 'DIN-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DIN-Regular'), url('../fonts/DINR.woff') format('woff');
+}
+
+body {
+    font-family: 'DIN-Regular', Arial, Impact, "Arial Black", Impact, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffdf7;
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/checkout/couple.jpg");
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin-top: 2%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(249, 249, 249, 0.9);
+    -moz-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+    box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
+    border-radius: 15px 15px 0 15px;
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.container {
+    width: 65%;
+    padding: 5% 10%;
+    border-radius: 15px 15px 0 15px;
+}
+
+h1 {
+    align-self: center;
+}
+
+form {
+    width: 100%;
+    border-radius: 15px 15px 0 15px;
+}
+
+form>* {
+    margin-top: 20px;
+    border-radius: 15px 15px 0 15px;
+}
+
+form input {
+    width: 100%;
+    min-height: 25px;
+    border: 0;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    margin-top: 5px;
+    color: #000000;
+    border-radius: 4px;
+    display: flex;
+}
+
+form label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #000000;
+}
+
+form h1 {
+    font-size: 24px;
+    line-height: 10px;
+    color: #1b1f51;
+    letter-spacing: 1px;
+}
+
+form h1:nth-of-type(2) {
+    margin-top: 10%;
+}
+
+.name {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    border-radius: 15px 15px 0 15px;
+}
+
+.name div {
+    width: 45%;
+    border-radius: 15px 15px 0 15px;
+}
+
+.address-info {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px 15px 0 15px;
+}
+
+.address-info div {
+    width: 30%;
+}
+
+.cc-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cc-info div {
+    width: 45%;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 15px 15px 0 15px;
+}
+
+.btns:hover {
+    animation-name: btn-hov;
+    animation-duration: 550ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btn-hov {
+    100% {
+        background-color: rgb(71, 199, 75);
+        color: #4a3b76;
+        transform: scale(1.05);
+    }
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+@media (max-width: 736px) {
+    .wrapper {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .btns {
+        align-items: center;
+    }
+    .btns button {
+        width: 50%;
+    }
+    form h1 {
+        text-align: center;
+    }
+    .name,
+    .address-info,
+    .cc-info {
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .name div,
+    .address-info div,
+    .cc-info div {
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+    }
+    .street,
+    .cc-num {
+        text-align: center;
+    }
+    input {
+        margin: 5px 0;
+        min-height: 30px;
+    }
+    img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+}
+
+#validation {
+    background-color: #FFC800;
+    border: 2px solid #FFC800;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    width: 100px;
+    height: auto;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    float: right;
+}
+
+#validation:hover {
+    border: 2px solid white;
+    background-color: rgb(71, 199, 75);
+    cursor: pointer;
+    font-weight: bold
+}
+
+
+/* BACK BUTTON */
+
+#back_btn {
+    background-color: #5d5d5d;
+    ;
+    border: 2px solid #5d5d5d;
+    ;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    width: 100px;
+    height: auto;
+    margin: 3px;
+    float: right;
+}
+
+#back_btn:hover {
+    background-color: #adacac;
+    border: 2px solid white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.bout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

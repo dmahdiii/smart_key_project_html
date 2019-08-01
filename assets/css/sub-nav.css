@@ -1,0 +1,86 @@
+/*************************************
+********** SUB NAV CATERGORY *********
+*************************************/
+
+
+/*----------   CATEGORY   ---------*/
+
+.sub-nav-category {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    background-color: #1b1f51;
+    cursor: pointer;
+}
+
+.sub-nav-category>div {
+    width: 14%;
+    min-width: 120px;
+    border-left: 0.06em solid #FFC800;
+    padding: 5px;
+    line-height: 32px;
+    font-size: 19px;
+    color: white;
+    text-align: center;
+}
+
+.sub-nav-category>div:hover {
+    color: #FFC800;
+    ;
+}
+
+#sub-nav-category-active {
+    background-color: #FFC800;
+    color: #1b1f51;
+    font-weight: bold;
+}
+
+#sub-nav-category-active-down {
+    background-color: #FFC800;
+    color: #1b1f51;
+    border-bottom: 0.1em solid #FFC800;
+    font-weight: bold;
+}
+
+
+/*----------   SUB-CATEGORY   ---------*/
+
+div[class*="sub-cat"] {
+    z-index: 20;
+    position: absolute;
+    display: none;
+    flex-flow: column;
+    background-color: white;
+    cursor: pointer;
+}
+
+div[class*="sub-cat"] .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    width: 100%;
+    height: 50px;
+    border-bottom: 0.1em solid #1b1f51;
+}
+
+div[class*="sub-cat"] .container:hover {
+    border-bottom: 0.1em solid #FFC800;
+    border-left: 0.0;
+}
+
+div[class*="sub-cat"] .title {
+    font-size: 1.2em;
+    text-align: center;
+    margin-right: 10%;
+}
+
+div[class*="sub-cat"] img {
+    display: block;
+    max-width: 80%;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}

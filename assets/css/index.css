@@ -1,0 +1,476 @@
+/**************************************
+**************** GENERAL *************
+**************************************/
+
+@font-face {
+    font-family: 'DIN-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DIN-Regular'), url('../fonts/DINR.woff') format('woff');
+}
+
+body {
+    font-family: 'DIN-Regular', Arial, Impact, "Arial Black", Impact, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffdf7;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+
+/**************************************
+*************** NAV MAIN **************
+**************************************/
+
+#nav-flex-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fffdf7;
+}
+
+.nav.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+
+/************* NAV LOGO SMART KEY ***********/
+
+#nav-logo {
+    width: 40%;
+}
+
+#nav-logo>img {
+    display: block;
+    max-width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/************* NAV DROP DOWM ALL-PRODUCT ***********/
+
+#nav-product img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+#nav-product-button {
+    min-width: 120px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.ui.dropdown {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+#nav-product {
+    width: 15%;
+    height: 100%;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#nav-product>.ui.dropdown {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+
+/*********** NAV SEARCH ***********/
+
+#nav-search {
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    width: 25%;
+}
+
+#nav-search img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+#nav-search input {
+    border-radius: 20px;
+    line-height: 100px;
+    height: 30px;
+    border: 1px solid #777777;
+    margin: 5px 0;
+    font-size: 1em;
+    padding-left: 8px;
+}
+
+#nav-search input:hover {
+    border: 1px solid #FFC800;
+}
+
+#nav-search.promt:hover {
+    background-color: #FFC800;
+}
+
+
+/************* NAV CONTACT ***********/
+
+#nav-contact {
+    width: 15%;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 75px;
+    text-decoration: underline #fffdf7;
+    cursor: pointer;
+}
+
+#nav-contact span:hover {
+    text-decoration: underline #FFC800
+}
+
+
+/********* LOG & BASKET-BUTTON ***********/
+
+.log-and-basket {
+    width: 15%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+
+/************* LOGIN-BUTTON **************/
+
+#nav-button-login {
+    width: 45%;
+    margin: 0px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+#nav-button-login>.shape {
+    width: 50px;
+    height: 50px;
+    border: solid #1b1f51 1px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+#nav-button-login>.shape:hover {
+    border: solid #FFC800 1px;
+}
+
+#nav-button-login img {
+    margin: 6px 0 0 0;
+    width: 20px;
+}
+
+#nav-button-login p {
+    font-weight: bold;
+    line-height: 10px;
+}
+
+
+/********* BASKET- BUTTON ***********/
+
+#nav-basket {
+    cursor: pointer;
+    display: inline-flex;
+}
+
+#nav-basket>.shape {
+    width: 50px;
+    height: 50px;
+    border: solid #1b1f51 1px;
+    border-radius: 7px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#nav-basket>.shape:hover {
+    border: solid #FFC800 1px;
+}
+
+#nav-basket img {
+    position: relative;
+    top: -7px;
+    width: 35px;
+}
+
+#nav-basket-qty {
+    width: 18px;
+    font-size: 0.9em;
+    background: #FFC800;
+    color: #1b1f51;
+    border-radius: 50%;
+    z-index: 3;
+    font-weight: bold;
+    margin-left: 17px;
+    margin-top: 3px;
+}
+
+#nav-basket>p {
+    margin: 0 0 0 6px;
+}
+
+#nav-basket>strong {
+    margin: 22px 0 0 0;
+    font-size: 1.5em;
+}
+
+
+/*************************************
+************* MAIN SECTION ***********
+**************************************/
+
+.main-section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 180px;
+    width: 100%;
+}
+
+
+/*************************************
+*************  PRESENTATION  *********
+**************************************/
+
+.presentation {
+    display: block;
+}
+
+
+/************* SLIDE-BOX **************/
+
+.light-box {
+    display: inline-block;
+    width: 800px;
+    height: 339px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.light-box img {
+    width: 800px;
+}
+
+.light-box ul {
+    width: 300%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.light-box li {
+    float: left;
+}
+
+
+/*************************************
+*********** SPECIFICATION ************
+**************************************/
+
+.specification {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.specification .spec {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 5px;
+    border-top: solid 1px #1b1f51;
+    border-left: solid 1px #1b1f51;
+    box-shadow: 5px 5px 5px grey;
+    margin: 75px 25px 0 25px;
+    padding: 0 10px 0 0;
+}
+
+.specification .spec .picto {
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+}
+
+.specification .spec .picto>img {
+    position: relative;
+    top: -60px;
+}
+
+.specification h2 {
+    text-align: center;
+    margin: 15px 0 5px 0;
+}
+
+.specification ul {
+    margin-top: 0px;
+}
+
+.specification li {
+    margin: 10px 0 5px 0;
+}
+
+
+/***********************************
+*************   FOOTER  ************
+************************************/
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #1b1f51;
+    position: relative;
+    margin-top: 10px;
+    color: white;
+    padding: 10px 50px 25px 50px;
+}
+
+.footer div {
+    width: 20%;
+    min-width: 250px;
+}
+
+.footer ul {
+    line-height: 30px;
+}
+
+.footer-title {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: #FFC800;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer .payment-methods {
+    width: 70%;
+}
+
+
+/********** RESPONSIVE  **************/
+
+
+/* Medium devices (small, max-576px )*/
+
+@media (max-width: 576px) {
+    body {
+        font-size: 1em;
+    }
+}
+
+
+/* Medium devices (tablets, max-1024px)*/
+
+@media (max-width: 960px) {
+    body {
+        font-size: 1.1em;
+    }
+    #nav-logo {
+        font-size: 1.1em;
+    }
+    #nav-product {
+        font-size: 1.1em;
+    }
+    #nav-contact {
+        display: none;
+    }
+    #nav-search {
+        display: none;
+    }
+    #nav-login {
+        font-size: 1.1em;
+    }
+    /*hide logo loin nodal*/
+    #nodal-login>.image {
+        display: none;
+    }
+    #nav-basket {
+        font-size: 1.1em;
+    }
+    /*** card & proce **/
+    #nav-basket>p {
+        display: none;
+    }
+    /*** item ****/
+    /*invert order*/
+    .item {
+        justify-content: flex-start;
+    }
+    .picture {
+        width: 45%;
+    }
+    .description {
+        order: 3;
+        width: 45%;
+    }
+    /*** aside **/
+    #aside {
+        display: none;
+    }
+}
+
+
+/* Large devices (desktops, max-1024px )*/
+
+@media (max-width: 1024px) {
+    #nav-contact {
+        display: none;
+    }
+    #aside {
+        display: none;
+    }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up)*/
+
+@media (max-width: 1200px) {
+    body {
+        font-size: 1.1em;
+    }
+}
